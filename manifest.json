@@ -1,0 +1,68 @@
+{
+  "id": "clock-greeting",
+  "name": "Uhr mit Begrüßung",
+  "version": "0.1.0",
+  "description": "Große Uhrzeit mit tageszeitabhängiger Begrüßung, Datum und Kalenderwoche; die Schrift füllt das Fenster",
+  "author": "Gyrosguenter",
+  "license": "MIT",
+  "minAppVersion": "1.0.0",
+  "moduleType": "clock-greeting",
+  "category": "Time & Date",
+  "icon": "Clock",
+
+  "defaultConfig": {
+    "showGreeting": true,
+    "subtitle": "Schön, dass du da bist!",
+    "showSeconds": false,
+    "showWeek": true
+  },
+
+  "defaultSize": { "w": 1000, "h": 320 },
+
+  "defaultStyle": {
+    "padding": 24,
+    "fontSize": 16,
+    "backgroundColor": "rgba(0, 0, 0, 0.4)"
+  },
+
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "showGreeting": {
+        "type": "boolean",
+        "title": "Begrüßung zeigen",
+        "description": "\"Guten Morgen\", \"Guten Tag\", \"Guten Abend\" bzw. \"Gute Nacht\" über der Uhrzeit.",
+        "ui:widget": "toggle",
+        "ui:group": "Anzeige"
+      },
+      "subtitle": {
+        "type": "string",
+        "title": "Zusatztext",
+        "description": "Zeile unter der Begrüßung. Leer = keine.",
+        "ui:widget": "text",
+        "ui:group": "Anzeige"
+      },
+      "showSeconds": {
+        "type": "boolean",
+        "title": "Sekunden zeigen",
+        "ui:widget": "toggle",
+        "ui:group": "Anzeige"
+      },
+      "showWeek": {
+        "type": "boolean",
+        "title": "Kalenderwoche zeigen",
+        "ui:widget": "toggle",
+        "ui:group": "Anzeige"
+      }
+    }
+  },
+
+  "exports": {
+    "component": "default"
+  },
+
+  "dataRequirements": [],
+  "prefetchUrl": null,
+  "permissions": [],
+  "allowedDomains": []
+}
